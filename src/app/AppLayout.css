@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.App {
+    
+}
+
+.App > *{
+    padding-left: 2vw;
+    padding-right: 3vw;
+}
+
+.navmain {
+    height: min(92vh, calc(100vh - 60px))
+}
+
+.navmain > *{
+    padding-bottom: 15px;
+    padding-top: 10px; 
+}
+
+.nav {
+    position: fixed;
+    top: max(8vh, 60px);
+    border-right: 1px solid hsla(0, 0%, 0%, 0.226);
+    width: 250px;
+    height: min(92vh, calc(100vh - 60px));
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: hsla(0, 0%, 0%, 0) hsla(0, 0%, 100%, 0);
+}
+
+.nav:hover {
+    scrollbar-color: hsla(0, 0%, 0%, 0.226) hsla(0, 0%, 100%, 0);
+}
+
+.main {
+    position: relative;
+    margin-left: 270px;
+    top: max(8vh, 60px);
+}
