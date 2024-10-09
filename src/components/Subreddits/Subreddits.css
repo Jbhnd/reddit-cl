@@ -1,0 +1,43 @@
+aside {
+    background-color: hsl(0, 0%, 96%);
+    position: sticky;
+    top: max(8vh, 60px);
+    height: 80vh;
+    overflow-y: scroll;
+    overscroll-behavior: contain;
+    scrollbar-width: thin;
+    scrollbar-color: hsla(0, 0%, 0%, 0) hsla(0, 0%, 100%, 0);
+    border-radius: var(--div-bd-radius);
+    padding: 5px 30px;
+    min-width: 300px;
+    color: hsl(0, 0%, 20%);
+}
+
+.sr {
+    padding: 10px 10px;
+    /*background-color: hsl(0, 0%, 97%);*/
+    list-style: none;
+}
+
+.sr-figure {
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 10px;
+    align-items: center;
+    font-size: 14px;
+}
+
+.sr * {
+    color: black;
+    text-decoration: none;
+}
+
+.sr-figure > .icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/*.sr-figure*/ .sr-detail2 {
+    font-weight: 300;
+}

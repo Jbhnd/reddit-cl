@@ -7,13 +7,11 @@ function AppLayout() {
     return (
         <div className='App'>
             <Header />
-            <section className='navmain'>
-                <nav className='nav'>
-                    <Sidenav />
-                </nav>
-                <main className='main'>
-                    <Outlet />
-                </main>
+            <nav className='nav'>
+                <Sidenav />
+            </nav>
+            <section className='page'>
+                <Outlet />
             </section>
         </div>
     )

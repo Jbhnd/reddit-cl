@@ -1,0 +1,29 @@
+.subreddit .post-img-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: hsla(19, 15%, 5%, 0.8);
+    /*text-align: center;*/
+}
+
+.subreddit .subreddit-details {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.subreddit .subreddit-name {
+
+}
+
+.subreddit .subreddit-icon {
+    
+    color: red;
+}
+
+.subreddit .post-img, .subreddit .post-video {
+    width: auto;
+    max-height: 500px;
+    display: block;
+    margin: auto;
+    /*object-fit: cover;*/
+}

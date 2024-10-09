@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
-import Post from './Post.js'
+import Post from './Post.jsx'
 
-const fetchPosts = () => {
+/*const fetchPosts = () => {
     return fetch('https://www.reddit.com/r/popular.json')
     .then((n) => n.json())
     .then((n) => {
@@ -22,19 +22,19 @@ const fetchPosts = () => {
             total_awards_received: post.data.total_awards_received
         }))
     })
-}
+}*/
 
-function Posts() {
-    const [ posts, setPosts ] = useState([])
+function Posts({posts}) {
+    console.log('ttttsearch', posts)/*const [ posts, setPosts ] = useState([])
     
     useEffect(() => {
         fetchPosts().then((posts) => setPosts(posts))
         console.log('1effectposts', posts)
     }, [])
-    console.log('2effectposts', posts)
+    console.log('2effectposts', posts)*/
     return (
         <>
-            {posts.map((post) => <Post post={post} />)}
+            {posts.map((post) => <Post key={post.id} post={post} />)}
         </>
         )
 }

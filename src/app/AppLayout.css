@@ -1,11 +1,22 @@
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
+    --div-bd-radius: 15px;
+}
+
+div {
+    
 }
 
 .App {
-    
+    position: relative;
+    /*left: 270px;*/
+    top: max(9vh, 70px);
+    background-color: white;
+    /*max-width: calc(100% - 270px);*/
+    /*padding-left: 4.5vw;
+    padding-right: 4.5vw;*/
 }
 
 .App > *{
@@ -13,11 +24,11 @@
     padding-right: 3vw;
 }
 
-.navmain {
-    height: min(92vh, calc(100vh - 60px))
+.nav-main {
+    
 }
 
-.navmain > *{
+.nav, .page {
     padding-bottom: 15px;
     padding-top: 10px; 
 }
@@ -25,20 +36,50 @@
 .nav {
     position: fixed;
     top: max(8vh, 60px);
+    left: 0;
+    border: 0px;
     border-right: 1px solid hsla(0, 0%, 0%, 0.226);
-    width: 250px;
+    width: 270px;
     height: min(92vh, calc(100vh - 60px));
     overflow-y: scroll;
     scrollbar-width: thin;
     scrollbar-color: hsla(0, 0%, 0%, 0) hsla(0, 0%, 100%, 0);
+    z-index: 6;
+    background-color: white;
+    overscroll-behavior: contain;
+    display: none;
+}
+
+.mask {
+    /*position: fixed;
+    top: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: hsla(0, 0%, 50%, 0.8);
+    z-index: 8;*/
 }
 
 .nav:hover {
     scrollbar-color: hsla(0, 0%, 0%, 0.226) hsla(0, 0%, 100%, 0);
 }
 
-.main {
-    position: relative;
-    margin-left: 270px;
-    top: max(8vh, 60px);
+.page {
+    /*max-width: 1100px;*/
+    margin: 0 auto;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+.main-container {
+    display: grid;
+    column-gap: 3%;
+    grid-template-columns: 73% 24%;
+}
+
+.main-container > * {
+    width: 100%;
+}
+
+.main-container aside {
+    /*background-color: teal;*/
 }

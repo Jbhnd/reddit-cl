@@ -9,31 +9,45 @@ header {
     border-bottom: 1px solid hsla(0, 0%, 0%, 0.226);
     column-gap: 2vw;
     background-color: white;
-    z-index: 2;
+    z-index: 10;
     width: 100%;
+    left: 0;
 }
 
-.navmenu-logobox {
+.navmenu-navlink {
     height: 70%;
     display: flex;
     column-gap: 20px;
     align-items: center;
     color: hsla(0, 0%, 0%, 0.6);
+    
 }
 
-.navmenu-logobox .nav-menu {
+.navmenu-navlink .nav-menu {
     transform: scale(1.5);
     display: none;
 }
 
-.logo-box {
-    display: flex;
-    height: 100%;
-    column-gap: 7px;
-    align-items: center;
+.nav-link {
+    text-decoration: none;
+    color: inherit;
 }
 
-.search-box {
+.navlink-logocaption {
+    display: flex;
+    /*max-height: 10%;*/
+    column-gap: 5px;
+    align-items: center;
+    /*overflow: hidden;*/
+}
+
+.navlink-logocaption img {
+    
+    color: blue;
+    width: 50px;
+}
+
+.search-form {
     flex: 10 1 0;
     /*border: 1px solid red;*/
     display: flex;
@@ -48,7 +62,7 @@ header {
     margin-left: 10px;
 }
 
-.logo-box button {
+.navlink-logocaption button {
     line-height: 0.5;
     letter-spacing: -1px;
     font-weight: bold;
@@ -56,17 +70,20 @@ header {
     background-color: hsla(0, 0%, 0%, 0);
 }
 
-.logo-box img {
-    max-height: 85%;
-    width: auto;
+.navlink-logocaption img {
+    
 }
 
-.logo-box figcaption {
-    font-size: 25px;
+.navlink-logocaption .logo-caption {
+    font-size: 26px;
     font-weight: bold;
 }
 
-.search-box .icon {
+.logo-caption-span {
+    color: red;
+}
+
+.search-form .icon {
     position: absolute;
     left: 17px;
     align-self: center;
@@ -74,7 +91,7 @@ header {
     opacity: 0.5;
 }
 
-.search-box .searchInput {
+.search-form .searchInput {
     border: none;
     flex: 1 1 0;
     box-sizing: border-box;
@@ -83,14 +100,15 @@ header {
     outline: none;
 }
 
+
 @media only screen and (max-width: 1200px) {
-    .navmenu-logobox .nav-menu {
+    .navmenu-navlink .nav-menu {
         display: inline-block;
     }
 }
 
 @media only screen and (max-width: 960px) {
-    .logo-box figcaption {
+    .navlink-logocaption .logo-caption {
         display: none;
     }
 }

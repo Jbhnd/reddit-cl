@@ -2,13 +2,17 @@ import logo from '../logo.svg';
 import './App.css';
 
 import { createBrowserRouter, createRoutesFromElements, Route } from 'react-router-dom'
-import AppLayout from './AppLayout.js'
-import Home from '../pages/Homepage/Home.js'
-import Main from '../components/Main/Main.js'
+import AppLayout from './AppLayout.jsx'
+import Home from '../pages/Home/Home.js'
+import Main from '../components/MainContainer/MainContainer.js'
+import Subreddit from '../pages/Subreddit/Subreddit.js'
+import Search from '../pages/Search/Search.js'
 
 export const router = createBrowserRouter(createRoutesFromElements(
   <Route path='/' element={<AppLayout/>}>
     <Route path='' element={<Home />} />
+    <Route path='/r/:subreddit' element={<Subreddit />} />
+    <Route path='search' element={<Search />} />
   </Route>
 ))
 
