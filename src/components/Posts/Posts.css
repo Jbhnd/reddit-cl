@@ -14,11 +14,11 @@
     box-shadow: 0px 3px 2px 1px hsla(0, 100%, 0%, 0.1);
 }
 
-.post * {
-    margin: 5px 0;
+.post > * {
+    margin: 10px 0px;
 }
 
-.post .post-text {
+.post .post-text, .post a {
     white-space: pre-wrap;
     word-wrap: break-word;
 }
@@ -46,6 +46,12 @@
     color: red;
 }
 
+.post .post-time {
+    margin-left: 15px;
+    font-size: 12px;
+    font-weight: 300;
+}
+
 .post-img, .post-video {
     width: 100%;
     max-height: 500px;
@@ -61,28 +67,68 @@
 }
 
 .interactions {
-    position: relative;
-    margin-top: 10px;
+    /*position: relative;
+    /*margin-top: 10px;*/
+    /*min-height: 50px;
+    margin-bottom: 0px;*/
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0px;
+    min-height: 25px;
 }
 
 .interactions .ups-downs {
-    display: flex;
+    /*display: flex;
     justify-content: flex-start;
-    column-gap: 10px;
+    column-gap: 10px;*/
 }
 
 .ups {
-    margin: auto 0px;
+    /*margin: auto 0px;*/
+    margin: auto 10px;
 }
 
-.comments-icon {
-    position: absolute;
+.post-comments {
+    /*position: absolute;
     right: 0px;
-    top: 0px;
+    top: 1px;*/
+    /*margin: 0px 0px;*/
+    /*bottom: 0px;*/
 }
 
-.upvote, .downvote, .comments-icon{
-    transform: scale(1.6);
-    
-    
+/*.comments-icon * {
+    margin: 0px 0px;
+}*/
+
+.post-comments > * {
+    /*margin: auto 0px;
+    margin-left: 10px;*/
+}
+
+.comments-icon:hover {
+    cursor: pointer;
+}
+
+.upvote, .downvote, .comments-icon {
+    transform: scale(1.5);
+}
+
+.post .num-comments {
+    margin: auto 7px;
+    margin-right: 0px;
+}
+
+.ups-downs .ups, .post-comments .num-comments {
+    /*vertical-align: top;*/
+    /*transform: translateY(-50%);*/
+}
+
+@media only screen and (max-width: 750px) {
+    .post {
+        padding: 5px 10px;
+    }
+
+    .post-img, .post-video {
+        max-height: 250px;
+    }
 }

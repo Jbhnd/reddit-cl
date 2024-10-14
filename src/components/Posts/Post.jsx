@@ -2,10 +2,22 @@ import './Posts.css'
 import logo from '../../logo.svg'
 import { PiArrowFatUpLight, PiArrowFatDownLight } from "react-icons/pi"
 import { GoComment } from "react-icons/go"
+import { useState } from "react"
+import Comments from "../Comments/Comments"
+import timeDiff from "../../utils/timeDiff"
 
 function Post(props) {
-    const { subreddit_name_prefixed, title, thumbnail, sr_detail: {icon_img, header_img}, url, post_hint, secure_media, selftext, ups } = props.post
+    const [ show, setShow ] = useState(false);
+    const { subreddit_name_prefixed, title, thumbnail, sr_detail: {icon_img, header_img}, url, post_hint, secure_media, selftext, ups, id, created, num_comments } = props.post
     console.log('props', title, secure_media, secure_media?.reddit_video?.fallback_url)
+    
+    const handleClick = (e) => {
+        e.preventDefault();
+        console.log(e.target)
+        setShow((currentShow) => !currentShow);
+    }
+    
+    const time = timeDiff(created);
     
     return (
         <div className='post'>
@@ -18,6 +30,10 @@ function Post(props) {
                     height='30px' width='30px'
                 />
                 <span className='subreddit-name'>{subreddit_name_prefixed}</span>
+                {(time.value) ?
+                    <span className='post-time'>{time.value}{time.unit} ago</span>
+                    : ''
+                }
             </div>
             
             <h3 className='post-title'>{title}</h3>
@@ -33,13 +49,17 @@ function Post(props) {
             </div>
             
             <div className='interactions'>
-                <div className='ups-downs'>
+                <span className='ups-downs'>
                     <PiArrowFatUpLight className='upvote' />
                     <span className='ups'>{ups}</span>
                     <PiArrowFatDownLight className='downvote' />
-                </div>
-                <GoComment className='comments-icon' />
+                </span>
+                <span className='post-comments'>
+                    <GoComment className='comments-icon' onClick={handleClick} />
+                    <span className='num-comments'>{num_comments}</span>
+                </span>
             </div>
+            {(show) && <Comments postId={id} />}
         </div>
         )
 }

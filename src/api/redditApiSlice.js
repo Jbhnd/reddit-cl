@@ -18,7 +18,7 @@ export const redditApi = createApi({
         }),
         // Fetch post comments
         getPostComments: builder.query({
-            query: (permalink) => `${permalink}.json`,
+            query: (postId) => `/comments/${postId}.json`,
             transformResponse: (response) => response[1].data.children.map((comment) => comment.data),
         }),
         // Fetch search subreddits

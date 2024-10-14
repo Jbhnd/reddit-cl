@@ -1,0 +1,54 @@
+.comments {
+    margin-top: 20px;
+}
+
+.comment {
+    /*white-space: pre-wrap;
+    word-wrap: break-word;*/
+    margin: 10px 0px;
+    margin-left: 15px;
+    background-color: hsla(0, 0%, 50%, 0.05);
+    border-radius: 20px;
+    position: relative;
+    padding: 2px 5px 5px 0px;
+}
+
+.comment .comment-details {
+    min-height: 30px;
+    /*margin: auto 0px;*/
+    align-content: center;
+    margin-bottom: 5px;
+    
+}
+
+.comment .author-icon {
+    width: 30px;
+    position: absolute;
+    left: -15px;
+    top: 0px;
+}
+
+.comment .comment-time {
+    /*margin-left: 15px;*/
+    font-size: 12px;
+    /*margin: auto 0px;*/
+    margin-left: 15px;
+    /*vertical-align: text-top;*/
+    font-weight: 300;
+}
+
+.comment > * {
+    margin-left: 20px;
+}
+
+.comment-details span {
+    /*vertical-align: middle;*/
+}
+
+.comment:hover {
+    box-shadow: 3px 3px 2px 3px hsla(0, 100%, 0%, 0.2)
+}
+
+.comment-body {
+    padding-inline: inherit;
+}

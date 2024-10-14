@@ -72,8 +72,8 @@ div {
 
 .main-container {
     display: grid;
-    column-gap: 3%;
-    grid-template-columns: 73% 24%;
+    column-gap: 4%;
+    grid-template-columns: 72% 24%;
 }
 
 .main-container > * {
@@ -82,4 +82,15 @@ div {
 
 .main-container aside {
     /*background-color: teal;*/
+}
+
+@media only screen and (max-width: 900px) {
+    .main-container {
+        grid-template-columns: 100%;
+    }
+
+    .page {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }

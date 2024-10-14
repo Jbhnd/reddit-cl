@@ -8,8 +8,8 @@ aside {
     scrollbar-width: thin;
     scrollbar-color: hsla(0, 0%, 0%, 0) hsla(0, 0%, 100%, 0);
     border-radius: var(--div-bd-radius);
-    padding: 5px 30px;
-    min-width: 300px;
+    padding: 5px 9%;
+    min-width: 270px;
     color: hsl(0, 0%, 20%);
 }
 
@@ -40,4 +40,10 @@ aside {
 
 /*.sr-figure*/ .sr-detail2 {
     font-weight: 300;
+}
+
+@media only screen and (max-width: 900px) {
+    .main-container aside {
+        display: none;
+    }  
 }
