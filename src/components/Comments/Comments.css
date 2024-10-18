@@ -6,7 +6,7 @@
     /*white-space: pre-wrap;
     word-wrap: break-word;*/
     margin: 10px 0px;
-    margin-left: 15px;
+    margin-left: 10px;
     background-color: hsla(0, 0%, 50%, 0.05);
     border-radius: 20px;
     position: relative;
@@ -22,10 +22,13 @@
 }
 
 .comment .author-icon {
-    width: 30px;
+    width: 20px;
     position: absolute;
-    left: -15px;
-    top: 0px;
+    left: -10px;
+    top: 2px;
+    background-color: hsla(0, 100%, 0%, 0.2);
+    height: 20px;
+    border-radius: 50%;
 }
 
 .comment .comment-time {

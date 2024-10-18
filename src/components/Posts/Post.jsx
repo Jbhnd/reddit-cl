@@ -5,6 +5,7 @@ import { GoComment } from "react-icons/go"
 import { useState } from "react"
 import Comments from "../Comments/Comments"
 import timeDiff from "../../utils/timeDiff"
+import Markdown from "react-markdown"
 
 function Post(props) {
     const [ show, setShow ] = useState(false);
@@ -36,7 +37,7 @@ function Post(props) {
                 }
             </div>
             
-            <h3 className='post-title'>{title}</h3>
+            <h3 className='post-title'><Markdown>{title}</Markdown></h3>
             <p className='post-text'>{selftext}</p>
             {(post_hint == 'link') && <a href={url} target='_blank'>{url}</a>}
             

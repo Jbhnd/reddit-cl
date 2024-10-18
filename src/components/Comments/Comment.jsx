@@ -1,6 +1,8 @@
 import logo from "../../logo.svg"
 import timeDiff from "../../utils/timeDiff"
 import Markdown from "react-markdown"
+import Avatar from "avataaars"
+import randomAvatarStyle from "../../utils/avatarStyle"
 
 function Comment({comment}) {
     const time = timeDiff(comment.created)
@@ -8,7 +10,7 @@ function Comment({comment}) {
     return (
         <div className='comment'>
             <div className='comment-details'>
-                <img className='author-icon' src={logo}></img>
+                <Avatar className='author-icon' avatarStyle='Transparent' {...randomAvatarStyle()} />
                 <span className='comment-author'>{comment.author}</span>
                 {(time.value) ?
                     <span className='comment-time'>{[time.value, time.unit, ' ago']}</span>

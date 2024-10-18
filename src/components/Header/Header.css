@@ -56,6 +56,10 @@ header {
     max-width: 600px;
 }
 
+.login-box {
+    visibility: hidden;
+}
+
 .login-box * {
     margin-left: 10px;
 }
