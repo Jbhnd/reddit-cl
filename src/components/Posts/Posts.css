@@ -41,9 +41,11 @@
 
 }
 
-.subreddit-img.icon {
+.subreddit-details .icon {
     border-radius: 50%;
-    color: red;
+    /*color: red;*/
+    height: 30px;
+    width: 30px;
 }
 
 .post .post-time {

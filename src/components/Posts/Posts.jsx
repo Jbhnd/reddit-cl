@@ -24,7 +24,7 @@ import Post from './Post.jsx'
     })
 }*/
 
-function Posts({posts}) {
+function Posts({posts, name='sub'}) {
     console.log('ttttsearch', posts)/*const [ posts, setPosts ] = useState([])
     
     useEffect(() => {
@@ -34,7 +34,7 @@ function Posts({posts}) {
     console.log('2effectposts', posts)*/
     return (
         <>
-            {posts.map((post) => <Post key={post.id} post={post} />)}
+            {posts.map((post) => <Post key={post.id} post={post} name={name} />)}
         </>
         )
 }

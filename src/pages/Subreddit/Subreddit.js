@@ -17,7 +17,7 @@ function Subreddit() {
                 {postsSuccess &&
                 <section className='main'>
                     <h2>r/{subreddit}</h2>
-                    <Posts posts={posts} />
+                    <Posts posts={posts} name='user' />
                 </section>
                 }
                 {subredditsSuccess &&

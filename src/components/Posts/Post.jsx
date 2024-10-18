@@ -6,10 +6,12 @@ import { useState } from "react"
 import Comments from "../Comments/Comments"
 import timeDiff from "../../utils/timeDiff"
 import Markdown from "react-markdown"
+import Avatar from "avataaars"
+import randomAvatarStyle from "../../utils/avatarStyle"
 
 function Post(props) {
     const [ show, setShow ] = useState(false);
-    const { subreddit_name_prefixed, title, thumbnail, sr_detail: {icon_img, header_img}, url, post_hint, secure_media, selftext, ups, id, created, num_comments } = props.post
+    const { subreddit_name_prefixed, title, thumbnail, sr_detail: {icon_img, header_img}, url, post_hint, secure_media, selftext, ups, id, created, num_comments, author } = props.post
     console.log('props', title, secure_media, secure_media?.reddit_video?.fallback_url)
     
     const handleClick = (e) => {
@@ -23,14 +25,22 @@ function Post(props) {
     return (
         <div className='post'>
             <div className='subreddit-details'>
-                <img
-                    src={icon_img}
-                    onError={(e) => { e.target.src = logo }}
-                    alt='subreddit icon'
-                    className='subreddit-img icon'
-                    height='30px' width='30px'
-                />
-                <span className='subreddit-name'>{subreddit_name_prefixed}</span>
+                {(props.name=='user') ?
+                (<>
+                    <Avatar className='author-icon icon' avatarStyle='transparent' {...randomAvatarStyle()} />
+                    <span className='subreddit-name'>{(props.name=='user') ? `u/${author}` : subreddit_name_prefixed}</span>
+                </>)
+                
+                : (<>
+                        <img
+                            src={icon_img}
+                            onError={(e) => { e.target.src = logo }}
+                            alt='subreddit icon'
+                            className='subreddit-img icon'
+                        />
+                        <span className='subreddit-name'>{subreddit_name_prefixed}</span>
+                    </>)
+                }
                 {(time.value) ?
                     <span className='post-time'>{time.value}{time.unit} ago</span>
                     : ''
