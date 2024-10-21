@@ -15,6 +15,11 @@ function Header() {
     
     const handleSearch = (e) => {
         e.preventDefault();
+        
+        if(!searchTerm) {
+            return;
+        }
+        
         navigate({
             pathname: "/search",
             search: `?q=${searchTerm}`
