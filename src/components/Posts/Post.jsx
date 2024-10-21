@@ -2,7 +2,7 @@ import './Posts.css'
 import logo from '../../logo.svg'
 import { PiArrowFatUpLight, PiArrowFatDownLight } from "react-icons/pi"
 import { GoComment } from "react-icons/go"
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import Comments from "../Comments/Comments"
 import timeDiff from "../../utils/timeDiff"
 import Markdown from "react-markdown"
@@ -11,8 +11,19 @@ import randomAvatarStyle from "../../utils/avatarStyle"
 
 function Post(props) {
     const [ show, setShow ] = useState(false);
+    const overflowRef = useRef(null);
     const { subreddit_name_prefixed, title, thumbnail, sr_detail: {icon_img, header_img}, url, post_hint, secure_media, selftext, ups, id, created, num_comments, author } = props.post
     console.log('props', title, secure_media, secure_media?.reddit_video?.fallback_url)
+    
+    useEffect(() => {
+        if(overflowRef.current.scrollHeight > overflowRef.current.clientHeight) {
+            overflowRef.current.classList.add('overflow')
+            }
+        }, []);
+    
+    const showPostText = () => {
+        overflowRef.current.classList.toggle('show');
+    }
     
     const handleClick = (e) => {
         e.preventDefault();
@@ -48,7 +59,10 @@ function Post(props) {
             </div>
             
             <h3 className='post-title'><Markdown>{title}</Markdown></h3>
-            <div className='post-text'><Markdown>{selftext}</Markdown></div>
+            <div ref={overflowRef} className='post-text' onClick={showPostText}>
+                <Markdown>{selftext}</Markdown>
+            </div>
+            
             {(post_hint == 'link') && <a href={url} target='_blank'>{url}</a>}
             
             <div className='post-img-container'>
@@ -66,7 +80,7 @@ function Post(props) {
                     <PiArrowFatDownLight className='downvote' />
                 </span>
                 <span className='post-comments'>
-                    <GoComment className='comments-icon' onClick={handleClick} />
+                    <GoComment className='comments-icon' onClick={(e) => handleClick(e)} />
                     <span className='num-comments'>{num_comments}</span>
                 </span>
             </div>

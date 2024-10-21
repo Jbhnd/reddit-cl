@@ -14,7 +14,7 @@ function Subreddits({subreddits}) {
                 <li key={subreddit.id} className='sr'>
                     <Link to={`/${subreddit.display_name_prefixed}`}>
                         <figure className='sr-figure'>
-                            <img src={subreddit.icon_img}
+                            <img src={subreddit.icon_img || logo}
                                 className='sr-img icon'
                                 onError={(e) => { e.target.src = logo }}
                                 alt='subreddit icon'

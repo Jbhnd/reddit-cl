@@ -11,11 +11,6 @@ function Header() {
     
     const onClick = (e) => {
         e.preventDefault();
-        const dialog = document.getElementById('dialog')
-        const main = document.getElementById('App')
-        console.log('ttt', main.getAttribute('inert'))
-        main.toggleAttribute('inert')
-        console.log('ttt', main.getAttribute('inert'))
     }
     
     const handleSearch = (e) => {

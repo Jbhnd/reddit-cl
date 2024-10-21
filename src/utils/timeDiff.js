@@ -17,7 +17,7 @@ function timeDiff(apiTime) {
         (months && {value: months, unit: 'mo.'}) ||
         (days && {value: days, unit: 'd.'}) ||
         (hours && {value: hours, unit: 'hr.'}) ||
-        (minutes && {value: minutes, unit: 'm'}) ||
+        (minutes && {value: minutes, unit: 'min.'}) ||
         {value: seconds, unit: 's'}
       )
 }
