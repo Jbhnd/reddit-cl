@@ -26,12 +26,12 @@ function Post(props) {
         <div className='post'>
             <div className='subreddit-details'>
                 {(props.name=='user') ?
-                (<>
-                    <Avatar className='author-icon icon' avatarStyle='transparent' {...randomAvatarStyle()} />
-                    <span className='subreddit-name'>{(props.name=='user') ? `u/${author}` : subreddit_name_prefixed}</span>
-                </>)
+                    (<>
+                        <Avatar className='author-icon icon' avatarStyle='transparent' {...randomAvatarStyle()} />
+                        <span className='subreddit-name'>{(props.name=='user') ? `u/${author}` : subreddit_name_prefixed}</span>
+                    </>)
                 
-                : (<>
+                :   (<>
                         <img
                             src={icon_img}
                             onError={(e) => { e.target.src = logo }}
@@ -48,7 +48,7 @@ function Post(props) {
             </div>
             
             <h3 className='post-title'><Markdown>{title}</Markdown></h3>
-            <p className='post-text'>{selftext}</p>
+            <div className='post-text'><Markdown>{selftext}</Markdown></div>
             {(post_hint == 'link') && <a href={url} target='_blank'>{url}</a>}
             
             <div className='post-img-container'>

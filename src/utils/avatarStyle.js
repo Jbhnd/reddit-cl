@@ -20,7 +20,25 @@ const styles = {
         'LongHairStraight2',
         'LongHairStraightStrand',
         'ShortHairDreads01',
-        'ShortHairDreads02'
+        'ShortHairDreads02',
+        'ShortHairFrizzle',
+        'ShortHairFrizzle',
+        'ShortHairShaggyMullet',
+        'ShortHairShaggyMullet',
+        'ShortHairShortCurly',
+        'ShortHairShortCurly',
+        'ShortHairShortFlat',
+        'ShortHairShortFlat',
+        'ShortHairShortRound',
+        'ShortHairShortRound',
+        'ShortHairShortWaved',
+        'ShortHairShortWaved',
+        'ShortHairSides',
+        'ShortHairSides',
+        'ShortHairTheCaesar',
+        'ShortHairTheCaesar',
+        'ShortHairTheCaesarSidePart',
+        'ShortHairTheCaesarSidePart'
     ],
   accessoriesType: [
     'Blank',
@@ -55,9 +73,9 @@ const styles = {
     'BlondeGolden',
     'Brown',
     'BrownDark',
-    /*'Platinum',*/
+    'Platinum',
     'Red',
-    'SilverGray'
+    /*'SilverGray'*/
   ],
   facialHairType: [
     'Blank',
@@ -67,7 +85,7 @@ const styles = {
     'MoustacheFancy',
     'MoustacheMagnum'
   ],
-  facialHairColor: [
+  /*facialHairColor: [
     'Auburn',
     'Black',
     'Blonde',
@@ -76,7 +94,7 @@ const styles = {
     'BrownDark',
     'Platinum',
     'Red'
-  ],
+  ],*/
   clotheType: [
     'BlazerShirt',
     'BlazerSweater',
@@ -176,7 +194,8 @@ function randomAvatarStyle() {
     for(const [key, value] of Object.entries(styles)) {
         randomStyle[key] = value[Math.floor(Math.random() * value.length)]
     }
-    return randomStyle;
+    const facialHairColor = randomStyle.hairColor;
+    return {...randomStyle, facialHairColor};
 }
 
 export default randomAvatarStyle;

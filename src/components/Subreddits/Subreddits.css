@@ -27,6 +27,14 @@ aside {
     font-size: 14px;
 }
 
+.sr-figure:hover {
+    column-gap: 30px;
+}
+
+.sr-figure:hover * {
+    transform: scale(1.2);
+}
+
 .sr * {
     color: black;
     text-decoration: none;
