@@ -13,13 +13,18 @@
     margin: 0 auto;*/
     /*background-color: grey;*/
     border-radius: var(--div-bd-radius);
-    padding: 5px 50px;
+    padding: 5px 40px;
     /*border-bottom: 1px solid hsla(0, 100%, 0%, 0.2);*/
     box-shadow: 0px 3px 2px 1px hsla(0, 100%, 0%, 0.1);
 }
 
 .post > * {
     margin: 10px 0px;
+    padding: 0px 10px;
+}
+
+.post.skeleton > * {
+    padding: 0px;
 }
 
 .post .post-text, .post a {

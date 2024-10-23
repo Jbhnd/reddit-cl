@@ -52,10 +52,10 @@
     box-shadow: 3px 3px 2px 3px hsla(0, 100%, 0%, 0.2)
 }
 
-.comment-body {
-    padding-inline: inherit;
-    /*white-space: pre-wrap;
-    word-wrap: break-word;*/
+.comment-body, .comment-body * {
+    /*padding-inline: inherit;*/
+    white-space: pre-wrap;
+    /*word-wrap: break-word;*/
 }
 
 .comment-body li * {

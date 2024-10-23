@@ -5,24 +5,30 @@ import Posts from '../../components/Posts/Posts'
 import { useSearchParams } from 'react-router-dom'
 import './Search.css'
 import Aside from '../../components/Aside/Aside'
+import PostsLoading from '../../components/Posts/PostsLoading'
 
 function Search() {
     const [ searchParam, setSearchParam ] = useSearchParams();
     const searchTerm = searchParam.get('q');
     
-    const { data: posts, isSuccess: postsSuccess } = useGetSearchPostsQuery(searchTerm)
+    const { isFetching: postsIsFetching, data: posts, isSuccess: postsSuccess } = useGetSearchPostsQuery(searchTerm)
     console.log('tttttsrcg', posts, searchTerm)
     const { data: subreddits, isSuccess: subredditsSuccess } = useGetSearchSubredditsQuery(searchTerm)
     
     return (
         <>
             <div className='search main-container'>
-                {postsSuccess &&
                 <section className='main'>
-                    <h2>{`"${searchTerm}"`}</h2>
-                    <Posts posts={posts} />
+                    {postsIsFetching &&
+                        <PostsLoading />
+                    }
+                    {postsSuccess &&
+                        <>
+                            <h2>{`"${searchTerm}"`}</h2>
+                            <Posts posts={posts} />
+                        </>
+                    }
                 </section>
-                }
                 {(subredditsSuccess && subreddits.length == 0) &&
                 <h2>No subreddits match {`"${searchTerm}"`}</h2>
                 }

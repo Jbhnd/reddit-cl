@@ -28,11 +28,7 @@ aside {
 }
 
 .sr-figure:hover {
-    column-gap: 30px;
-}
-
-.sr-figure:hover * {
-    transform: scale(1.2);
+    transform: scale(1.2) translate(8%);
 }
 
 .sr * {
