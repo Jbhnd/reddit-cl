@@ -1,4 +1,3 @@
-import logo from '../../logo.svg'
 import './Header.css'
 import { BiSearchAlt } from "react-icons/bi";
 import { RiMenuFill } from "react-icons/ri";
@@ -15,11 +14,6 @@ function Header() {
     
     const handleSearch = (e) => {
         e.preventDefault();
-        
-        if(!searchTerm) {
-            return;
-        }
-        
         navigate({
             pathname: "/search",
             search: `?q=${searchTerm}`

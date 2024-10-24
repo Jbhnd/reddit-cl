@@ -5,10 +5,6 @@
     --div-bd-radius: 15px;
 }
 
-div {
-    
-}
-
 .App {
     position: relative;
     /*left: 270px;*/
@@ -22,10 +18,6 @@ div {
 .App > *{
     padding-left: 2vw;
     padding-right: 3vw;
-}
-
-.nav-main {
-    
 }
 
 .nav, .page {
@@ -50,15 +42,6 @@ div {
     display: none;
 }
 
-.mask {
-    /*position: fixed;
-    top: 0px;
-    width: 100vw;
-    height: 100vh;
-    background-color: hsla(0, 0%, 50%, 0.8);
-    z-index: 8;*/
-}
-
 .nav:hover {
     scrollbar-color: hsla(0, 0%, 0%, 0.226) hsla(0, 0%, 100%, 0);
 }
@@ -78,10 +61,6 @@ div {
 
 .main-container > * {
     width: 100%;
-}
-
-.main-container aside {
-    /*background-color: teal;*/
 }
 
 @media only screen and (max-width: 1200px) {

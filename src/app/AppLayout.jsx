@@ -1,5 +1,5 @@
-import Header from '../components/Header/Header.js'
-import Sidenav from '../components/Sidenav/Sidenav.js'
+import Header from '../components/Header/Header'
+import Sidenav from '../components/Sidenav/Sidenav'
 import { Outlet } from 'react-router-dom'
 import './AppLayout.css'
 

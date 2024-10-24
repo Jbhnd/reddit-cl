@@ -9,9 +9,6 @@
 }
 
 .post {
-    /*width: 95%;
-    margin: 0 auto;*/
-    /*background-color: grey;*/
     border-radius: var(--div-bd-radius);
     padding: 5px 40px;
     /*border-bottom: 1px solid hsla(0, 100%, 0%, 0.2);*/
@@ -32,27 +29,14 @@
     word-wrap: break-word;
 }
 
-.post-img-container {
-    /*width: 100%;
-    overflow: hidden;
-    background-color: hsla(19, 15%, 5%, 0.7);
-    /*text-align: center;*/
-    
-}
-
-.subreddit-details {
+.post-details {
     display: flex;
     align-items: center;
     column-gap: 5px;
 }
 
-.subreddit-name {
-
-}
-
-.subreddit-details .icon {
+.post-details .icon {
     border-radius: 50%;
-    /*color: red;*/
     height: 30px;
     width: 30px;
 }
@@ -74,6 +58,8 @@
     -webkit-box-orient: vertical;
     overflow: clip;
     max-height: max-content;
+    padding-top: 3px;
+    padding-bottom: 5px;
 }
 
 .post-text:hover.overflow {
@@ -91,10 +77,7 @@
 .post-img, .post-video {
     width: 100%;
     max-height: 500px;
-    /*display: block;
-    margin: auto;*/
     object-fit: contain;
-    
     background-image: var(--image-url), linear-gradient(hsla(17, 5%, 45%, 1), hsla(17, 5%, 45%, 1));
     background-blend-mode: hue;
     backdrop-filter: blur(10px);
@@ -103,60 +86,27 @@
 }
 
 .interactions {
-    /*position: relative;
-    /*margin-top: 10px;*/
-    /*min-height: 50px;
-    margin-bottom: 0px;*/
     display: flex;
     justify-content: space-between;
     margin-bottom: 0px;
     min-height: 25px;
 }
 
-.interactions .ups-downs {
-    /*display: flex;
-    justify-content: flex-start;
-    column-gap: 10px;*/
-}
-
 .ups {
-    /*margin: auto 0px;*/
     margin: auto 10px;
 }
 
-.post-comments {
-    /*position: absolute;
-    right: 0px;
-    top: 1px;*/
-    /*margin: 0px 0px;*/
-    /*bottom: 0px;*/
-}
-
-/*.comments-icon * {
-    margin: 0px 0px;
-}*/
-
-.post-comments > * {
-    /*margin: auto 0px;
-    margin-left: 10px;*/
-}
-
-.comments-icon:hover {
+.comments-button:hover {
     cursor: pointer;
 }
 
-.upvote, .downvote, .comments-icon {
+.upvote, .downvote, .comments-button {
     transform: scale(1.5);
 }
 
 .post .num-comments {
     margin: auto 7px;
     margin-right: 0px;
-}
-
-.ups-downs .ups, .post-comments .num-comments {
-    /*vertical-align: top;*/
-    /*transform: translateY(-50%);*/
 }
 
 @media only screen and (max-width: 1100px) {

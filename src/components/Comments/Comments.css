@@ -21,7 +21,7 @@
     
 }
 
-.comment .author-icon {
+.comment .icon {
     width: 20px;
     position: absolute;
     left: -10px;
@@ -44,18 +44,12 @@
     margin-left: 20px;
 }
 
-.comment-details span {
-    /*vertical-align: middle;*/
-}
-
 .comment:hover {
     box-shadow: 3px 3px 2px 3px hsla(0, 100%, 0%, 0.2)
 }
 
 .comment-body, .comment-body * {
-    /*padding-inline: inherit;*/
     white-space: pre-wrap;
-    /*word-wrap: break-word;*/
 }
 
 .comment-body li * {

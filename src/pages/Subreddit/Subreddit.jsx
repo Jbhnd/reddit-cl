@@ -1,28 +1,28 @@
-import MainContainer from '../../components/MainContainer/MainContainer.js'
-import { useGetSubredditPostsQuery, useGetSubredditsQuery } from '../../api/redditApiSlice';
-import Subreddits from '../../components/Subreddits/Subreddits'
+import { useParams } from 'react-router-dom'
+import { useGetSubredditPostsQuery, useGetSubredditsQuery } from '../../api/redditApiSlice'
 import Posts from '../../components/Posts/Posts'
-import './Home.css'
+import Subreddits from '../../components/Subreddits/Subreddits'
 import Aside from '../../components/Aside/Aside'
 import PostsLoading from '../../components/Posts/PostsLoading'
 
-const homeSr = 'popular'
-
-function Home() {
-    const { isLoading: postsIsLoading, data: posts, isSuccess: postsSuccess } = useGetSubredditPostsQuery(homeSr)
-    console.log('ttttt', posts)
+function Subreddit() {
+    let { subreddit } = useParams();
+    console.log('ttt', subreddit)
+    const { isLoading: postsIsLoading, data: posts, isSuccess: postsSuccess } = useGetSubredditPostsQuery(subreddit)
     const { data: subreddits, isSuccess: subredditsSuccess } = useGetSubredditsQuery()
     
     return (
         <>
-            <h2>Home</h2>
-            <div className='home main-container'>
+            <div className='subreddit main-container'>
                 <section className='main'>
                     {postsIsLoading &&
                         <PostsLoading />
                     }
                     {postsSuccess &&
-                        <Posts posts={posts} />
+                        <>
+                            <h2>r/{subreddit}</h2>
+                            <Posts posts={posts} name='user' />
+                        </>
                     }
                 </section>
                 {subredditsSuccess &&
@@ -35,4 +35,4 @@ function Home() {
     )
 }
 
-export default Home
+export default Subreddit;

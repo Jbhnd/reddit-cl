@@ -2,7 +2,6 @@ import Subreddits from '../Subreddits/Subreddits'
 
 function Aside(props) {
     const { heading, about, subreddits, searchSubreddits } = props;
-    console.log('nnnsr', props, subreddits, searchSubreddits)
     
     return (
         <>

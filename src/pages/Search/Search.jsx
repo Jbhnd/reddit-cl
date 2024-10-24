@@ -1,9 +1,6 @@
-import MainContainer from '../../components/MainContainer/MainContainer.js'
 import { useGetSearchPostsQuery, useGetSearchSubredditsQuery } from '../../api/redditApiSlice';
-import Subreddits from '../../components/Subreddits/Subreddits'
 import Posts from '../../components/Posts/Posts'
 import { useSearchParams } from 'react-router-dom'
-import './Search.css'
 import Aside from '../../components/Aside/Aside'
 import PostsLoading from '../../components/Posts/PostsLoading'
 
@@ -12,7 +9,6 @@ function Search() {
     const searchTerm = searchParam.get('q');
     
     const { isFetching: postsIsFetching, data: posts, isSuccess: postsSuccess } = useGetSearchPostsQuery(searchTerm)
-    console.log('tttttsrcg', posts, searchTerm)
     const { data: subreddits, isSuccess: subredditsSuccess } = useGetSearchSubredditsQuery(searchTerm)
     
     return (
