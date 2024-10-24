@@ -30,7 +30,9 @@ function Search() {
                     }
                 </section>
                 {(subredditsSuccess && subreddits.length == 0) &&
-                <h2>No subreddits match {`"${searchTerm}"`}</h2>
+                <aside>
+                    <h2>No subreddits match {`"${searchTerm}"`}</h2>
+                </aside>
                 }
                 {(subredditsSuccess && subreddits.length !== 0) &&
                 <aside>

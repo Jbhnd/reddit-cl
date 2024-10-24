@@ -63,7 +63,7 @@ function Post(props) {
                 <Markdown>{selftext}</Markdown>
             </div>
             
-            {(post_hint == 'link') && <a href={url} target='_blank'>{url}</a>}
+            {(post_hint == 'link') && <p className='post-linktext'><a href={url} target='_blank'>{url}</a></p>}
             
             <div className='post-img-container'>
                 {

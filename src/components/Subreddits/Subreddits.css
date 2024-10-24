@@ -5,11 +5,11 @@ aside {
     height: 80vh;
     overflow-y: scroll;
     overscroll-behavior: contain;
-    scrollbar-width: thin;
+    /*scrollbar-width: thin;*/
     scrollbar-color: hsla(0, 0%, 0%, 0) hsla(0, 0%, 100%, 0);
     border-radius: var(--div-bd-radius);
     padding: 5px 9%;
-    min-width: 270px;
+    /*min-width: 270px;*/
     color: hsl(0, 0%, 20%);
 }
 
@@ -27,8 +27,12 @@ aside {
     font-size: 14px;
 }
 
+.sr-figure:hover * {
+    transform: scale(1.2);
+}
+
 .sr-figure:hover {
-    transform: scale(1.2) translate(8%);
+    column-gap: 25px;
 }
 
 .sr * {
@@ -46,8 +50,27 @@ aside {
     font-weight: 300;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 950px) {
     .main-container aside {
         display: none;
     }  
+}
+
+@media only screen and (max-width: 1100px) {
+    aside {
+        padding: 5px 2% 5px 5%;
+    }
+
+    .sr {
+        padding-bottom: 0px;
+    }
+    
+    .sr-figure > .icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .sr-figure .sr-detail2 {
+        font-size: 12px;
+    }
 }

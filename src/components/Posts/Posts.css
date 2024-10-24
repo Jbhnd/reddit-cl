@@ -27,7 +27,7 @@
     padding: 0px;
 }
 
-.post .post-text, .post a {
+.post .post-text, .post .post-linktext {
     white-space: pre-wrap;
     word-wrap: break-word;
 }
@@ -64,12 +64,16 @@
 }
 
 .post-text {
+    border-radius: 10px;
+    max-height: 5em;
+}
+
+.post-text.overflow {
     display: -webkit-box;
     -webkit-line-clamp: 4; /* Number of lines */
     -webkit-box-orient: vertical;
     overflow: clip;
-    text-overflow: ellipsis;
-    border-radius: 10px;
+    max-height: max-content;
 }
 
 .post-text:hover.overflow {
@@ -153,6 +157,12 @@
 .ups-downs .ups, .post-comments .num-comments {
     /*vertical-align: top;*/
     /*transform: translateY(-50%);*/
+}
+
+@media only screen and (max-width: 1100px) {
+    .post {
+        padding: 5px 15px;
+    }
 }
 
 @media only screen and (max-width: 750px) {
