@@ -3,7 +3,7 @@ function timeDiff(apiTime) {
       return '';
     }
     
-    var diff = (Date.now()) - apiTime * 1000;
+    var diff = (Date.now() - (apiTime * 1000));
     
     var seconds = Math.round(diff / 1000),
     minutes = Math.round(seconds / 60),
