@@ -22,11 +22,11 @@ function Home() {
                         <Posts posts={posts} />
                     }
                 </section>
-                {subredditsSuccess &&
                 <aside>
+                    {subredditsSuccess &&
                     <Aside heading='Subreddits' subreddits={subreddits} />
+                    }
                 </aside>
-                }
             </div>
         </>
     )

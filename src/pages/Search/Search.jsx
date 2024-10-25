@@ -25,16 +25,15 @@ function Search() {
                         </>
                     }
                 </section>
-                {(subredditsSuccess && subreddits.length == 0) &&
+                
                 <aside>
-                    <h2>No subreddits match {`"${searchTerm}"`}</h2>
+                    {(subredditsSuccess && subreddits.length == 0) &&
+                        <h2>No subreddits match {`"${searchTerm}"`}</h2>
+                    }
+                    {(subredditsSuccess && subreddits.length !== 0) &&
+                        <Aside heading='Subreddits' subreddits={subreddits} />
+                    }
                 </aside>
-                }
-                {(subredditsSuccess && subreddits.length !== 0) &&
-                <aside>
-                    <Aside heading='Subreddits' subreddits={subreddits} />
-                </aside>
-                }
             </div>
         </>
     )

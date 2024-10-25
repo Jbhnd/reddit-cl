@@ -33,7 +33,7 @@ header {
     color: inherit;
 }
 
-.navlink-logocaption {
+.logo-caption {
     display: flex;
     /*max-height: 10%;*/
     column-gap: 5px;
@@ -41,7 +41,7 @@ header {
     /*overflow: hidden;*/
 }
 
-.navlink-logocaption img {
+.logo-caption img {
     width: 50px;
 }
 
@@ -64,7 +64,7 @@ header {
     margin-left: 10px;
 }
 
-.navlink-logocaption button {
+.logo-caption button {
     line-height: 0.5;
     letter-spacing: -1px;
     font-weight: bold;
@@ -72,16 +72,12 @@ header {
     background-color: hsla(0, 0%, 0%, 0);
 }
 
-.navlink-logocaption img {
-    
-}
-
-.navlink-logocaption .logo-caption {
+.logo-caption .caption {
     font-size: 26px;
     font-weight: bold;
 }
 
-.logo-caption-span {
+.caption .span {
     color: red;
 }
 
@@ -110,7 +106,7 @@ header {
 }
 
 @media only screen and (max-width: 960px) {
-    .navlink-logocaption .logo-caption {
+    .logo-caption .caption {
         display: none;
     }
 }

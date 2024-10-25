@@ -25,12 +25,12 @@ function Header() {
             <div className='navmenu-navlink'>
                 <RiMenuFill className='nav-menu' />
                 <Link className='nav-link' to='/'>
-                    <figure className='navlink-logocaption'>
+                    <figure className='logo-caption'>
                         <img
                             src={require('../../images/reddit-icon-transparentt.png')}
                             alt='The reddit logo'
                         />
-                        <figcaption className='logo-caption'><span className='logo-caption-span'>reddit</span>Client</figcaption>
+                        <figcaption className='caption'><span className='span'>reddit</span>Client</figcaption>
                     </figure>
                 </Link>
             </div>
