@@ -3,8 +3,8 @@
 }
 
 .comment {
-    /*white-space: pre-wrap;
-    word-wrap: break-word;*/
+    white-space: pre-wrap;
+    word-wrap: break-word;
     margin: 12px 0px;
     margin-left: 10px;
     background-color: hsla(0, 0%, 50%, 0.05);
@@ -46,10 +46,6 @@
 
 .comment:hover {
     box-shadow: 3px 3px 2px 3px hsla(0, 100%, 0%, 0.2)
-}
-
-.comment-body, .comment-body * {
-    white-space: pre-wrap;
 }
 
 .comment-body li * {
