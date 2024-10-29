@@ -21,17 +21,19 @@ function Search() {
                     {postsSuccess &&
                         <>
                             <h2>{`"${searchTerm}"`}</h2>
-                            <Posts posts={posts} />
+                            {(posts.length !== 0) ?
+                                <Posts posts={posts} />
+                                : `No posts match "${searchTerm}"`
+                            }
                         </>
                     }
                 </section>
                 
                 <aside>
-                    {(subredditsSuccess && subreddits.length == 0) &&
-                        <h2>No subreddits match {`"${searchTerm}"`}</h2>
-                    }
-                    {(subredditsSuccess && subreddits.length !== 0) &&
+                    {subredditsSuccess &&
+                        (subreddits.length !== 0) ?
                         <Aside heading='Subreddits' subreddits={subreddits} />
+                        : <h2>No subreddits match {`"${searchTerm}"`}</h2>
                     }
                 </aside>
             </div>
