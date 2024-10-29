@@ -1,12 +1,13 @@
 import './Header.css'
 import { BiSearchAlt } from "react-icons/bi";
 import { RiMenuFill } from "react-icons/ri";
-import { useState } from "react"
+import { useState, useRef } from "react"
 import { useNavigate, Link } from "react-router-dom"
 
 function Header() {
-    const [ searchTerm, setSearchTerm ] = useState('')
-    const navigate = useNavigate();
+    /*const [ searchTerm, setSearchTerm ] = useState('')*/
+    const searchTermRef = useRef('')
+    const navigate = useNavigate()
     
     const onClick = (e) => {
         e.preventDefault();
@@ -14,10 +15,10 @@ function Header() {
     
     const handleSearch = (e) => {
         e.preventDefault();
-        if(searchTerm) {
+        if(searchTermRef.current) {
             navigate({
                 pathname: "/search",
-                search: `?q=${searchTerm}`
+                search: `?q=${searchTermRef.current}`
             })
         }
     }
@@ -38,7 +39,7 @@ function Header() {
             </div>
             <form className='search-form' role='search' onSubmit={handleSearch}>
                 <BiSearchAlt className='icon' />
-                <input className='searchInput' value={searchTerm} placeholder="Search" aria-label="Search" onChange={(e)=>setSearchTerm(e.target.value)}></input>
+                <input className='searchInput' placeholder="Search" aria-label="Search" onChange={(e)=>searchTermRef.current=e.target.value}></input>
             </form>
             <div className='login-box'>
                 <button onClick={onClick}>login</button>

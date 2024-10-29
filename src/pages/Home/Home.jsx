@@ -7,7 +7,6 @@ const homeSr = 'popular'
 
 function Home() {
     const { isLoading: postsIsLoading, data: posts, isSuccess: postsSuccess } = useGetSubredditPostsQuery(homeSr)
-    console.log('ttttt', posts)
     const { data: subreddits, isSuccess: subredditsSuccess } = useGetSubredditsQuery()
     
     return (
