@@ -6,6 +6,7 @@
 
 .post ul, .post ol {
     list-style-position: inside;
+    white-space: normal;
 }
 
 .post {
@@ -55,6 +56,7 @@
 .post-text.overflow {
     display: -webkit-box;
     -webkit-line-clamp: 4; /* Number of lines */
+    line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: clip;
     max-height: max-content;

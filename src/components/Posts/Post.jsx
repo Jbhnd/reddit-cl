@@ -14,7 +14,7 @@ function Post(props) {
     const overflowRef = useRef(null);
     const { post, name } = props;
     /*const { subreddit_name_prefixed, title, thumbnail, sr_detail: {icon_img, header_img}, url, post_hint, secure_media, selftext, ups, id, created, num_comments, author } = props.post*/
-    /*console.log('props', post.title, post.secure_media, post.secure_media?.reddit_video?.fallback_url)*/
+    console.log('props', post, post.title, post.secure_media, post.secure_media?.reddit_video?.fallback_url)
     
     useEffect(() => {
         if(overflowRef.current.scrollHeight > overflowRef.current.clientHeight) {
@@ -68,8 +68,8 @@ function Post(props) {
             
             <div className='post-img-container'>
                 {
-                (post.secure_media?.reddit_video?.fallback_url) ? <video className='post-video' controls unmute ><source src={post.secure_media?.reddit_video?.fallback_url} type="video/mp4" /></video>
-                : (post.post_hint == 'image' && (post.url || post.thumbnail)) ? <img className='post-img' src={post.url || post.thumbnail} alt='' style={{"--image-url": `url(${post.url || post.thumbnail})`}} />
+                (post.secure_media?.reddit_video?.fallback_url) ? <video className='post-video' controls ><source src={post.secure_media?.reddit_video?.fallback_url} type="video/mp4" /></video>
+                : (post.post_hint == 'image' && (post.url || post.thumbnail)) ? <img className='post-img' src={post.url || post.thumbnail} alt={post.title} style={{"--image-url": `url(${post.url || post.thumbnail})`}} />
                 : ''
             }
             </div>

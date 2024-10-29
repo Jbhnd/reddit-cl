@@ -14,10 +14,12 @@ function Header() {
     
     const handleSearch = (e) => {
         e.preventDefault();
-        navigate({
-            pathname: "/search",
-            search: `?q=${searchTerm}`
-        })
+        if(searchTerm) {
+            navigate({
+                pathname: "/search",
+                search: `?q=${searchTerm}`
+            })
+        }
     }
     
     return (
@@ -36,7 +38,7 @@ function Header() {
             </div>
             <form className='search-form' role='search' onSubmit={handleSearch}>
                 <BiSearchAlt className='icon' />
-                <input className='searchInput' value={searchTerm} onChange={(e)=>setSearchTerm(e.target.value)}></input>
+                <input className='searchInput' value={searchTerm} placeholder="Search" aria-label="Search" onChange={(e)=>setSearchTerm(e.target.value)}></input>
             </form>
             <div className='login-box'>
                 <button onClick={onClick}>login</button>
