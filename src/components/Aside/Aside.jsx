@@ -5,7 +5,7 @@ function Aside(props) {
     
     return (
         <>
-            <h3>{heading.toUpperCase()}</h3>
+            <h3 class='heading'>{heading}</h3>
             {(subreddits) && <Subreddits subreddits={subreddits} />}
             
         </>)

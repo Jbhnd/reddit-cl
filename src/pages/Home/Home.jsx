@@ -13,14 +13,14 @@ function Home() {
         <>
             <h2>Home</h2>
             <div className='home main-container'>
-                <section className='main'>
+                <main className='main'>
                     {postsIsLoading &&
                         <PostsLoading />
                     }
                     {postsSuccess &&
                         <Posts posts={posts} />
                     }
-                </section>
+                </main>
                 <aside>
                     {subredditsSuccess &&
                     <Aside heading='Subreddits' subreddits={subreddits} />

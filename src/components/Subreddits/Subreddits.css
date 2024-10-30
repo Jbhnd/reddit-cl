@@ -13,6 +13,10 @@ aside {
     color: hsl(0, 0%, 20%);
 }
 
+aside .heading {
+    text-transform: uppercase;
+}
+
 .sr {
     padding: 10px 10px;
     /*background-color: hsl(0, 0%, 97%);*/

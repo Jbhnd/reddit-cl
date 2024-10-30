@@ -14,26 +14,31 @@ function Search() {
     return (
         <>
             <div className='search main-container'>
-                <section className='main'>
+                <main className='main'>
                     {postsIsFetching &&
                         <PostsLoading />
                     }
-                    {postsSuccess &&
-                        <>
+                    {(postsSuccess && posts.length == 0) &&
+                        (<>
                             <h2>{`"${searchTerm}"`}</h2>
-                            {(posts.length !== 0) ?
-                                <Posts posts={posts} />
-                                : `No posts match "${searchTerm}"`
-                            }
+                            `No posts match "${searchTerm}"`
                         </>
+                        )
                     }
-                </section>
+                    {(postsSuccess && posts.length !== 0) &&
+                        (<>
+                            <h2>{`"${searchTerm}"`}</h2>
+                            <Posts posts={posts} />
+                        </>)
+                    }
+                </main>
                 
                 <aside>
-                    {subredditsSuccess &&
-                        (subreddits.length !== 0) ?
+                    {(subredditsSuccess && subreddits.length == 0) &&
+                        <h2>No subreddits match {`"${searchTerm}"`}</h2>
+                    }
+                    {(subredditsSuccess && subreddits.length !== 0) &&
                         <Aside heading='Subreddits' subreddits={subreddits} />
-                        : <h2>No subreddits match {`"${searchTerm}"`}</h2>
                     }
                 </aside>
             </div>

@@ -14,7 +14,7 @@ function Subreddit() {
     return (
         <>
             <div className='subreddit main-container'>
-                <section className='main'>
+                <main className='main'>
                     {postsIsFetching &&
                         <PostsLoading />
                     }
@@ -24,7 +24,7 @@ function Subreddit() {
                             <Posts posts={posts} name='user' />
                         </>
                     }
-                </section>
+                </main>
                 <aside>
                     {subredditsSuccess &&
                         <Aside heading='Subreddits' subreddits={subreddits} />
