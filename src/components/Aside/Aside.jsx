@@ -5,7 +5,7 @@ function Aside(props) {
     
     return (
         <>
-            <h3 class='heading'>{heading}</h3>
+            <h3 className='heading'>{heading}</h3>
             {(subreddits) && <Subreddits subreddits={subreddits} />}
             
         </>)
