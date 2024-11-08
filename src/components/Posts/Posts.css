@@ -4,9 +4,8 @@
     row-gap: 20px;
 }
 
-.post ul, .post ol {
-    list-style-position: inside;
-    white-space: normal;
+.post.skeleton > * {
+    padding: 0px;
 }
 
 .post {
@@ -21,15 +20,6 @@
     padding: 0px 10px;
 }
 
-.post.skeleton > * {
-    padding: 0px;
-}
-
-.post .post-text, .post .post-linktext {
-    white-space: pre-wrap;
-    word-wrap: break-word;
-}
-
 .post-details {
     display: flex;
     align-items: center;
@@ -42,15 +32,28 @@
     width: 30px;
 }
 
-.post .post-time {
+.post-details .post-time {
     margin-left: 15px;
     font-size: 12px;
     font-weight: 300;
 }
 
+.post .post-text, .post .post-linktext {
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
 .post-text {
     border-radius: 10px;
     max-height: 5em;
+}
+
+.post-text li {
+    white-space: normal;
+    list-style-position: inside;
+    * {
+        display: inline;
+    }
 }
 
 .post-text.overflow {

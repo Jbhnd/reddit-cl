@@ -45,6 +45,10 @@
     box-shadow: 3px 3px 2px 3px hsla(0, 100%, 0%, 0.2)
 }
 
-.comment-body li * {
-    display: inline;
+.comment-body li {
+    white-space: normal;
+    list-style-position: inside;
+    * {
+        display: inline;
+    }
 }
