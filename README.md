@@ -2,10 +2,10 @@
 
 A dynamic **React web application** for browsing Reddit content with a clean, user-friendly interface. This project demonstrates **React development, Redux state management, API integration, and responsive design**.
 
-## 🔗 Live Demo
+## Live Demo
 [reddit-cl](https://reddit-cl.pages.dev)
 
-## 💡 Features
+## Features
 - **Homepage:** Displays popular posts from Reddit.  
 - **Post Comments:** View comments under each post, dynamically fetched from Reddit.
 - **Search Functionality:** Search for keywords and view related Reddit posts.
@@ -14,7 +14,7 @@ A dynamic **React web application** for browsing Reddit content with a clean, us
 - **Global State Management:** Uses **Redux** to manage state across components efficiently.  
 - **Responsive Design:** Works smoothly on desktop and mobile devices.
 
-## 🛠️ Technologies Used
+## Technologies Used
 - **React** – Component-based architecture and UI rendering.  
 - **Redux** – State management for scalable and maintainable code.  
 - **HTML5 & CSS3** – Structure and styling of the app.  
@@ -22,7 +22,7 @@ A dynamic **React web application** for browsing Reddit content with a clean, us
 - **Reddit API** – Fetches posts, subreddits, and search results.  
 - **Cloudflare Pages** – Deployment of the live app (or your deployment method).
 
-## 🚀 Getting Started
+## Getting Started
 To run this project locally:
 
 1. Clone the repository:
@@ -54,6 +54,6 @@ npm start
 
 > This app runs entirely client-side and fetches data directly from Reddit’s API.
 
-## 👨‍💻 Author
+## Author
 
-[Joy] – [GitHub Profile](https://github.com/Jbhnd)
+[Joy.O] – [GitHub Profile](https://github.com/Jbhnd)
