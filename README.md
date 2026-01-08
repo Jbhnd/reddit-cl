@@ -19,8 +19,8 @@ A dynamic **React web application** for browsing Reddit content with a clean, us
 - **Redux** – State management for scalable and maintainable code.  
 - **HTML5 & CSS3** – Structure and styling of the app.  
 - **JavaScript (ES6+)** – API calls, event handling, and dynamic content.  
-- **Reddit API** – Fetches posts, subreddits, and search results.  
-- **Cloudflare Pages** – Deployment of the live app (or your deployment method).
+- **Reddit API** – Fetches posts, comments, subreddits, and search results.  
+- **Cloudflare Pages** – Deployment of the live app.
 
 ## Getting Started
 To run this project locally:
@@ -28,7 +28,7 @@ To run this project locally:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/reddit-cl.git
+git clone https://github.com/Jbhnd/reddit-cl.git
 ````
 
 2. Navigate into the project directory:
