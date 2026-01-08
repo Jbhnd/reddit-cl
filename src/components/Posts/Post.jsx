@@ -13,9 +13,7 @@ function Post(props) {
     const [ showComments, setShowComments ] = useState(false);
     const overflowRef = useRef(null);
     const { post, name } = props;
-    /*const { subreddit_name_prefixed, title, thumbnail, sr_detail: {icon_img, header_img}, url, post_hint, secure_media, selftext, ups, id, created, num_comments, author } = props.post*/
-    /*console.log('props', post, post.title, post.secure_media, post.secure_media?.reddit_video?.fallback_url)*/
-    
+   
     useEffect(() => {
         if(overflowRef.current.scrollHeight > overflowRef.current.clientHeight) {
             overflowRef.current.classList.add('overflow')
